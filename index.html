@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0f" />
+    <meta
+      name="description"
+      content="A browser listening demo of an N-DirAC Field RVQ spatial-audio reconstruction."
+    />
+    <title>N-DirAC — Field RVQ Listening Demo</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d0f'/%3E%3Cpath d='M12 36c7-20 13 20 20 0s13 20 20 0' fill='none' stroke='%23ff5c35' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="N-DirAC home">
+        <span class="mark" aria-hidden="true"></span>
+        N—DIRAC
+      </a>
+      <span class="header-label">FIELD RVQ / LISTENING STUDY 01</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Neural spatial audio coding</p>
+          <h1 id="page-title">Hear the field,<br /><em>not the codec.</em></h1>
+          <p class="intro">
+            A six-second First-Order Ambisonics scene reconstructed with
+            N-DirAC Field RVQ. Headphones recommended.
+          </p>
+        </div>
+
+        <div class="orbital" aria-hidden="true">
+          <div class="orbit orbit-one"><i></i></div>
+          <div class="orbit orbit-two"><i></i></div>
+          <div class="orbit orbit-three"></div>
+          <div class="core"><span>5</span><small>BANDS</small></div>
+        </div>
+      </section>
+
+      <section class="listening-card" aria-labelledby="player-title">
+        <div class="card-meta">
+          <div>
+            <p class="section-index">01 / RECONSTRUCTION</p>
+            <h2 id="player-title">fold4_room23_mix005</h2>
+          </div>
+          <span class="format-pill">STEREO MONITOR</span>
+        </div>
+
+        <div class="visualizer-wrap">
+          <canvas id="visualizer" aria-hidden="true"></canvas>
+          <div class="visualizer-axis" aria-hidden="true">
+            <span>0:00</span><span>0:03</span><span>0:06</span>
+          </div>
+        </div>
+
+        <div class="transport">
+          <button id="playButton" class="play-button" type="button" aria-label="Play reconstruction">
+            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z" /></svg>
+            <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z" /></svg>
+          </button>
+          <div class="timeline-group">
+            <input id="timeline" type="range" min="0" max="6" value="0" step="0.01" aria-label="Audio position" />
+            <div class="time-row"><span id="currentTime">0:00.0</span><span id="duration">0:06.0</span></div>
+          </div>
+          <button id="muteButton" class="icon-button" type="button" aria-label="Mute audio">
+            <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.5-.5a5 5 0 0 1 0 7M18.8 6a8 8 0 0 1 0 12" /></svg>
+          </button>
+        </div>
+
+        <audio id="audio" preload="metadata">
+          <source src="audio/field-rvq-b05-s05-stereo.wav" type="audio/wav" />
+          Your browser does not support WAV audio playback.
+        </audio>
+      </section>
+
+      <section class="metrics" aria-label="Reconstruction details">
+        <article><span class="metric-value">750</span><span class="metric-unit">bit/s</span><p>Spatial side information</p></article>
+        <article><span class="metric-value">5 × 5</span><span class="metric-unit">bands · stages</span><p>Residual vector quantization</p></article>
+        <article><span class="metric-value">64</span><span class="metric-unit">entries</span><p>Codebook size</p></article>
+        <article><span class="metric-value">6.0</span><span class="metric-unit">seconds</span><p>STARSS23 scene excerpt</p></article>
+      </section>
+
+      <section class="method" aria-labelledby="method-title">
+        <p class="section-index">02 / SIGNAL PATH</p>
+        <div class="method-grid">
+          <h2 id="method-title">One compact field.<br />A spatial scene intact.</h2>
+          <div class="method-copy">
+            <p>
+              Field RVQ encodes the scene's direction-dependent spatial field across five frequency bands,
+              then reconstructs the FOA signal from a shared omnidirectional channel.
+            </p>
+            <p class="note">
+              Browser playback uses a stereo monitor decode of the reconstructed four-channel FOA file.
+              Dataset: STARSS23 · scene: dev-test-sony / fold4_room23_mix005.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>N-DirAC research demo</span>
+      <span>Field RVQ · Experiment 33</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
