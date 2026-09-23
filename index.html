@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#0b0d0f" />
     <meta
       name="description"
-      content="A browser listening demo of an N-DirAC Field RVQ spatial-audio reconstruction."
+      content="A browser listening demo of a MetaFOA spatial-audio reconstruction."
     />
-    <title>N-DirAC — Field RVQ Listening Demo</title>
+    <title>MetaFOA — Listening Demo</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -24,21 +24,21 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="N-DirAC home">
+      <a class="wordmark" href="#top" aria-label="MetaFOA home">
         <span class="mark" aria-hidden="true"></span>
-        N—DIRAC
+        METAFOA
       </a>
-      <span class="header-label">FIELD RVQ / LISTENING STUDY 01</span>
+      <span class="header-label">SPATIAL AUDIO / LISTENING DEMO 01</span>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="eyebrow">Neural spatial audio coding</p>
+          <p class="eyebrow">Low-bitrate spatial audio coding</p>
           <h1 id="page-title">Hear the field,<br /><em>not the codec.</em></h1>
           <p class="intro">
             A six-second First-Order Ambisonics scene reconstructed with
-            N-DirAC Field RVQ. Headphones recommended.
+            MetaFOA. Headphones recommended.
           </p>
         </div>
 
@@ -54,7 +54,7 @@
         <div class="card-meta">
           <div>
             <p class="section-index">01 / RECONSTRUCTION</p>
-            <h2 id="player-title">fold4_room23_mix005</h2>
+            <h2 id="player-title">metafoa_demo_01</h2>
           </div>
           <span class="format-pill">STEREO MONITOR</span>
         </div>
@@ -81,7 +81,7 @@
         </div>
 
         <audio id="audio" preload="metadata">
-          <source src="audio/field-rvq-b05-s05-stereo.wav" type="audio/wav" />
+          <source src="audio/metafoa-demo.wav" type="audio/wav" />
           Your browser does not support WAV audio playback.
         </audio>
       </section>
@@ -99,12 +99,11 @@
           <h2 id="method-title">One compact field.<br />A spatial scene intact.</h2>
           <div class="method-copy">
             <p>
-              Field RVQ encodes the scene's direction-dependent spatial field across five frequency bands,
+              MetaFOA encodes direction-dependent spatial metadata across frequency bands,
               then reconstructs the FOA signal from a shared omnidirectional channel.
             </p>
             <p class="note">
               Browser playback uses a stereo monitor decode of the reconstructed four-channel FOA file.
-              Dataset: STARSS23 · scene: dev-test-sony / fold4_room23_mix005.
             </p>
           </div>
         </div>
@@ -112,8 +111,8 @@
     </main>
 
     <footer>
-      <span>N-DirAC research demo</span>
-      <span>Field RVQ · Experiment 33</span>
+      <span>MetaFOA research demo</span>
+      <span>Low-bitrate FOA coding</span>
     </footer>
 
     <script src="script.js"></script>

@@ -1,7 +1,14 @@
-# N-DirAC Field RVQ listening demo
+# MetaFOA listening demo
 
-A static research demo for an N-DirAC Field RVQ reconstruction, published with GitHub Pages.
+A static research demo for MetaFOA, published with GitHub Pages.
 
-The included browser-ready stereo monitor was decoded from the reconstructed four-channel FOA output for STARSS23 scene `fold4_room23_mix005` (Experiment 33).
+**Live demo:** <https://weiting-lai.github.io/metafoa/>
+
+The included browser-ready stereo monitor was decoded from a reconstructed
+four-channel First-Order Ambisonics (FOA) output.
+
+This repository currently contains only the demo website and its listening
+sample. The manuscript and full research implementation will be released when
+the work is ready to share.
 
 Open `index.html` directly or serve the directory with any static HTTP server.
