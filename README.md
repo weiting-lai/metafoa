@@ -15,10 +15,6 @@ not a replacement for the four-channel spatial signal. Source recording:
 <https://zenodo.org/records/7880637>. Dataset copyright and license are in
 [`audio/STARSS23-LICENSE.txt`](audio/STARSS23-LICENSE.txt).
 
-The Opus sample encodes that original stereo monitoring render at 24 kbps
-using `libopus` in constant-bitrate mode. It is a stereo listening reference,
-not an FOA four-channel encode.
-
 This repository currently contains only the demo website and its listening
 samples. The manuscript and full research implementation will be released when
 the work is ready to share.
