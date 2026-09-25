@@ -67,17 +67,9 @@ h2 { margin-bottom: 0; font-size: 1.8rem; line-height: 1.2; letter-spacing: -.03
 h3 { margin-bottom: 4px; font-size: 1.15rem; line-height: 1.3; font-weight: 680; letter-spacing: -.015em; }
 .sample-detail { margin-bottom: 0; color: #718092; font-size: .84rem; }
 .sample audio { display: block; width: 100%; height: 54px; margin-top: 22px; accent-color: #a96d3c; }
-.pending-audio {
-  display: grid;
-  place-items: center;
-  min-height: 54px;
-  margin-top: 22px;
-  border: 1px dashed #d5dee5;
-  border-radius: 8px;
-  color: #8997a5;
-  background: #fbfcfd;
-  font-size: .85rem;
-}
+.source-note { margin: 13px 2px 0; color: #82909d; font-size: .78rem; line-height: 1.5; }
+.source-note a { color: inherit; text-underline-offset: 2px; }
+.source-note code { font-size: .94em; }
 
 footer {
   display: flex;
