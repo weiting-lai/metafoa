@@ -5,7 +5,9 @@ A static research demo for MetaFOA, published with GitHub Pages.
 **Live demo:** <https://weiting-lai.github.io/metafoa/>
 
 The included browser-ready stereo monitor was decoded from a reconstructed
-four-channel First-Order Ambisonics (FOA) output.
+four-channel First-Order Ambisonics (FOA) output. The matching original audio
+has not yet been supplied, so its player is marked as pending rather than
+presenting an unrelated recording as the reference.
 
 This repository currently contains only the demo website and its listening
 sample. The manuscript and full research implementation will be released when
